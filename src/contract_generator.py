@@ -313,7 +313,7 @@ CLÁUSULA OCTAVA - RESOLUCIÓN DE CONFLICTOS:
 Cualquier controversia derivada del presente contrato será resuelta mediante mediación previa, y en su defecto, por los tribunales competentes de la República Argentina.
 
 CLÁUSULA NOVENA - JURISDICCIÓN:
-Para todos los efectos legales, las partes se someten a la jurisdicción de los tribunales de [CIUDAD/PROVINCIA].
+Para todos los efectos legales, las partes se someten a la jurisdicción de los tribunales de San Martín, Mendoza.
 
 En prueba de conformidad, las partes firman el presente contrato en dos ejemplares de igual tenor.
 
@@ -379,7 +379,7 @@ Las partes se comprometen a:
 3. Mantener medidas de seguridad adecuadas.
 
 CLÁUSULA TERCERA - PLAZO:
-La obligación de confidencialidad tendrá una duración de [PLAZO] años.
+La obligación de confidencialidad tendrá una duración de [] años.
 
 CLÁUSULA CUARTA - EXCEPCIONES:
 No se considera confidencial la información que:
