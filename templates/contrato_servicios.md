@@ -54,7 +54,7 @@ Todos los derechos de propiedad intelectual sobre los entregables finales serán
 LAS PARTES acuerdan que el presente contrato podrá ser firmado mediante firma digital, la cual tendrá la misma validez y eficacia probatoria que la firma ológrafa, conforme al artículo 2 de la Ley 25.506 y sus normas reglamentarias. El documento final será protegido mediante hash SHA-256 para garantizar su integridad.
 
 ### UNDÉCIMA: LEY APLICABLE Y JURISDICCIÓN
-Para todos los efectos legales derivados del presente contrato, LAS PARTES se someten a las leyes de la República Argentina y a la jurisdicción de los tribunales ordinarios en lo Comercial de la Ciudad Autónoma de Buenos Aires, renunciando a cualquier otro fuero o jurisdicción que pudiera corresponderles.
+Para todos los efectos legales derivados del presente contrato, LAS PARTES se someten a las leyes de la República Argentina y a la jurisdicción de los tribunales ordinarios en lo Comercial de San Martín, Mendoza, renunciando a cualquier otro fuero o jurisdicción que pudiera corresponderles.
 
 ---
 
