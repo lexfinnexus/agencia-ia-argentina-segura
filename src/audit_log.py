@@ -10,9 +10,8 @@ y Ley 24.240 (Defensa del Consumidor) de la República Argentina.
 
 import hashlib
 import json
-import logging
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from typing import Any, Dict, Optional
 from dataclasses import dataclass, asdict
 from enum import Enum
@@ -69,30 +68,26 @@ class AuditLogger:
     def __init__(self, log_file_path: str = "audit_log.jsonl"):
         self.log_file_path = log_file_path
         self._ensure_log_file_exists()
-        
-        # Configurar logger estructurado
-        self.logger = logging.getLogger("AgenciaIA_Audit")
-        self.logger.setLevel(logging.INFO)
-        
-        # Evitar duplicación de handlers
-        if not self.logger.handlers:
-            handler = logging.FileHandler(self.log_file_path, encoding='utf-8')
-            formatter = logging.Formatter('%(message)s')
-            handler.setFormatter(formatter)
-            self.logger.addHandler(handler)
 
     def _ensure_log_file_exists(self) -> None:
         """Crea el archivo de log si no existe."""
-        os.makedirs(os.path.dirname(os.path.abspath(self.log_file_path)) or '.', exist_ok=True)
+        dir_path = os.path.dirname(os.path.abspath(self.log_file_path))
+        if dir_path:
+            os.makedirs(dir_path, exist_ok=True)
         if not os.path.exists(self.log_file_path):
             with open(self.log_file_path, 'w', encoding='utf-8') as f:
                 f.write("")
 
-    def _get_timestamps(self) -> tuple[str, str]:
+    def _get_timestamps(self) -> tuple:
         """Obtiene timestamps en UTC y ART (Argentina, UTC-3)."""
         now_utc = datetime.now(timezone.utc)
-        now_art = now_utc.astimezone(timezone(offset=__import__('datetime').timedelta(hours=-3)))
+        now_art = now_utc.astimezone(timezone(timedelta(hours=-3)))
         return now_utc.isoformat(), now_art.isoformat()
+
+    def _write_to_file(self, payload: Dict[str, Any]) -> None:
+        """Escribe directamente en el archivo de log (evita problemas con logger global)."""
+        with open(self.log_file_path, 'a', encoding='utf-8') as f:
+            f.write(json.dumps(payload, ensure_ascii=False) + "\n")
 
     def log_event(
         self,
@@ -110,7 +105,7 @@ class AuditLogger:
             action_description: Descripción clara de la acción realizada.
             severity: Nivel de severidad del evento.
             raw_data: Datos asociados (se convertirán a hash, nunca se guardan en crudo).
-            legal_checks: Diccionario de cumplimiento legal (ej: {"ley_25326": True}).
+            legal_checks: Diccionario de cumplimiento legal.
             
         Returns:
             AuditRecord: El registro generado con su hash de integridad.
@@ -158,8 +153,8 @@ class AuditLogger:
         log_payload = record.to_dict()
         log_payload["record_hash_sha256"] = record_hash
         
-        # Escribir en el archivo de log (JSON Lines format)
-        self.logger.info(json.dumps(log_payload, ensure_ascii=False))
+        # Escribir directamente en el archivo
+        self._write_to_file(log_payload)
         
         # Alerta inmediata en caso de evento CRÍTICO
         if severity == SeverityLevel.CRITICAL:
@@ -181,23 +176,20 @@ class AuditLogger:
             f"ID Transacción: {record.transaction_id}\n"
             f"ACCIÓN INMEDIATA REQUERIDA POR {OWNER_NAME}."
         )
-        # En producción, esto enviaría un email, SMS o webhook a Humberto Patricio Castro
         print(alert_msg)
 
     def verify_log_integrity(self) -> bool:
         """
         Verifica que el archivo de log no haya sido alterado.
-        (En una implementación avanzada, esto verificaría una cadena de hashes).
         
         Returns:
             bool: True si el formato es válido y no hay corrupciones evidentes.
         """
         try:
             with open(self.log_file_path, 'r', encoding='utf-8') as f:
-                for line_num, line in enumerate(f, 1):
+                for line in f:
                     if line.strip():
                         record_dict = json.loads(line)
-                        # Verificar que tenga el hash del registro
                         if "record_hash_sha256" not in record_dict:
                             return False
             return True
@@ -278,4 +270,3 @@ if __name__ == "__main__":
     
     print("\n✅ Auditoría completada. Revisar test_audit.log")
     print("✅ Informe de cumplimiento:", json.dumps(auditor.generate_compliance_report(), indent=2))
-  
