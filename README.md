@@ -21,6 +21,7 @@ Sistema modular de inteligencia artificial para la generación, análisis y gest
 ## 🎯 Objetivo del Proyecto
 
 Proporcionar una infraestructura de código abierto, segura y auditable para:
+
 1. Automatizar la creación de borradores de contratos con contexto humanizado.
 2. Garantizar el cumplimiento de la Ley 25.326 (Datos Personales), Ley 25.506 (Firma Digital) y Ley 24.240 (Defensa del Consumidor).
 3. Implementar un sistema de *Human-in-the-Loop* (HITL) donde la IA nunca ejecuta acciones legales autónomas.
@@ -70,8 +71,9 @@ agencia-ia-argentina-segura/
 │   │   ├── terminos_uso.md
 │   │   ├── cumplimiento_legal.md
 │   │   └── ...
-│   └── technical/              # Documentación técnica
-│       └── arquitectura.md
+│   ├── technical/              # Documentación técnica
+│   │   └── arquitectura.md
+│   └── memoria-agentes.md      # Segundo cerebro del sistema
 ├── prompts/                    # Prompts maestros de cada agente de IA
 │   ├── prompt-grok-coordinador.md
 │   ├── prompt-generador-contratos.md
@@ -86,8 +88,13 @@ agencia-ia-argentina-segura/
 │   ├── contract_generator.py   # Generación de borradores
 │   └── human_supervisor.py     # Control de aprobación humana (HITL)
 ├── templates/                  # Plantillas base de contratos
+│   └── contrato_servicios.md
+├── tests/                      # Pruebas unitarias
+│   └── test_audit_log.py
 ├── config.example.py           # Configuración base (copiar a config.py)
+├── main.py                     # Punto de entrada ejecutable
 ├── requirements.txt            # Dependencias de Python
+├── CHANGELOG.md                # Registro de cambios
 ├── LICENSE                     # Licencia MIT
 └── README.md                   # Este archivo
 ⚖️ Marco Legal de Cumplimiento
@@ -157,133 +164,20 @@ print(f"✅ Contrato aprobado. Hash final: {decision.new_hash}")
 Trazabilidad: Cada acción genera un AuditRecord con hash SHA-256 inmutable.
 No Repudio: Los registros de supervisión humana vinculan criptográficamente la decisión al supervisor.
 Minimización: Los datos sensibles nunca se almacenan en texto plano en los logs de auditoría.
-🤝 Contribuciones
-Las contribuciones son bienvenidas bajo los siguientes principios:
-Todo cambio debe mantener o mejorar el cumplimiento legal argentino.
-Ningún cambio puede eliminar la supervisión humana obligatoria.
-Los nuevos agentes de IA deben incluir su propio prompt maestro en /prompts.
-📄 Licencia
-Distribuido bajo la Licencia MIT. Ver el archivo LICENSE para más detalles.
-Este proyecto es propiedad de Humberto Patricio Castro. República Argentina, 2026.
-
-## 🎯 PASO 4: Guardar (Commit)
-1. Haz clic en **"Commit changes..."**.
-2. Escribe: `Actualizar README.md con arquitectura, instalación y marco legal completo`
-3. Clic en **"Commit changes"**.
-
----
-
-# 📄 ARCHIVO 19: `templates/contrato_servicios.md`
-
-## 🎯 PASO 1: Crear el archivo
-1. Haz clic en **"Add file"** → **"Create new file"**.
-2. Escribe exactamente:
-```text
-templates/contrato_servicios.md
-# CONTRATO DE PRESTACIÓN DE SERVICIOS PROFESIONALES
-
-**Fecha:** [FECHA]  
-**Lugar:** [CIUDAD], República Argentina
-
----
-
-## ENTRE LAS PARTES
-
-Por una parte, **[NOMBRE COMPLETO O RAZÓN SOCIAL DEL PRESTADOR]**, DNI/CUIT N° [NÚMERO], con domicilio legal en [DOMICILIO COMPLETO], en adelante denominado "**EL PRESTADOR**";
-
-Y por la otra, **[NOMBRE COMPLETO O RAZÓN SOCIAL DEL CLIENTE]**, DNI/CUIT N° [NÚMERO], con domicilio legal en [DOMICILIO COMPLETO], en adelante denominado "**EL CLIENTE**";
-
-Ambas partes, en conjunto "LAS PARTES", convienen celebrar el presente Contrato de Prestación de Servicios, sujeto a las siguientes cláusulas:
-
----
-
-## CLÁUSULAS
-
-### PRIMERA: OBJETO
-EL PRESTADOR se obliga a realizar a favor de EL CLIENTE los siguientes servicios:  
-[DESCRIPCIÓN DETALLADA, CLARA Y ESPECÍFICA DE LOS SERVICIOS A PRESTAR].
-
-### SEGUNDA: PLAZO DE EJECUCIÓN
-El presente contrato tendrá una duración de [PLAZO, ej: seis (6) meses], iniciando el [FECHA DE INICIO] y finalizando el [FECHA DE FINALIZACIÓN], salvo rescisión anticipada conforme a la Cláusula Séptima.
-
-### TERCERA: HONORARIOS Y FORMA DE PAGO
-EL CLIENTE abonará a EL PRESTADOR la suma total de [MONTO EN NÚMEROS] ([MONTO EN LETRAS] PESOS ARGENTINOS) en concepto de contraprestación por los servicios.  
-El pago se realizará de la siguiente manera: [DESCRIBIR FORMA DE PAGO, ej: 50% al inicio y 50% contra entrega final, mediante transferencia bancaria a la CBU N° XXX].
-
-### CUARTA: OBLIGACIONES DE EL PRESTADOR
-1. Realizar los servicios con la diligencia, profesionalismo y estándar de cuidado propios de su actividad.
-2. Cumplir con los plazos establecidos en la Cláusula Segunda.
-3. Mantener estricta confidencialidad sobre la información de EL CLIENTE a la que tenga acceso.
-4. Emitir los comprobantes fiscales correspondientes (Factura) por los pagos recibidos.
-
-### QUINTA: OBLIGACIONES DE EL CLIENTE
-1. Abonar los honorarios en los términos y plazos pactados.
-2. Proporcionar a EL PRESTADOR toda la información, documentación y acceso necesario para la ejecución de los servicios.
-3. Designar un interlocutor válido para la toma de decisiones durante la vigencia del contrato.
-
-### SEXTA: PROTECCIÓN DE DATOS PERSONALES (Ley 25.326)
-LAS PARTES declaran que cumplirán estrictamente con la Ley 25.326 de Protección de Datos Personales y las disposiciones de la Agencia de Acceso a la Información Pública (AAIP). Los datos personales intercambiados serán utilizados exclusivamente para el cumplimiento de este contrato, no serán cedidos a terceros sin consentimiento expreso, y se implementarán las medidas de seguridad técnicas y organizativas adecuadas para protegerlos.
-
-### SÉPTIMA: RESCISIÓN
-Cualquiera de LAS PARTES podrá rescindir el presente contrato de manera anticipada, notificando a la otra parte por escrito con una antelación mínima de [ej: treinta (30)] días corridos. En caso de rescisión, EL CLIENTE abonará a EL PRESTADOR la parte proporcional de los servicios efectivamente prestados hasta la fecha de finalización.
-
-### OCTAVA: INDEPENDENCIA CONTRACTUAL
-EL PRESTADOR actúa como un contratista independiente. Nada en este contrato se interpretará como la creación de una relación laboral, sociedad o joint venture entre LAS PARTES.
-
-### NOVENA: PROPIEDAD INTELECTUAL
-[Seleccionar una opción:]  
-- Opción A: Todos los derechos de propiedad intelectual sobre los entregables finales serán transferidos a EL CLIENTE una vez abonado el total de los honorarios.  
-- Opción B: EL PRESTADOR retiene la propiedad intelectual de sus metodologías y herramientas preexistentes, otorgando a EL CLIENTE una licencia de uso no exclusiva y perpetua para los fines del proyecto.
-
-### DÉCIMA: FIRMA DIGITAL (Ley 25.506)
-LAS PARTES acuerdan que el presente contrato podrá ser firmado mediante firma digital, la cual tendrá la misma validez y eficacia probatoria que la firma ológrafa, conforme al artículo 2 de la Ley 25.506 y sus normas reglamentarias. El documento final será protegido mediante hash SHA-256 para garantizar su integridad.
-
-### UNDÉCIMA: LEY APLICABLE Y JURISDICCIÓN
-Para todos los efectos legales derivados del presente contrato, LAS PARTES se someten a las leyes de la República Argentina y a la jurisdicción de los tribunales ordinarios en lo Comercial de la Ciudad Autónoma de Buenos Aires, renunciando a cualquier otro fuero o jurisdicción que pudiera corresponderles.
-
----
-
-En prueba de conformidad, LAS PARTES firman el presente contrato en dos (2) ejemplares de un mismo tenor y a un solo efecto, en la fecha y lugar indicados en el encabezado.
-
-<br>
-<br>
-
-_____________________________  
-**FIRMA EL PRESTADOR**  
-Nombre:  
-DNI/CUIT:  
-
-<br>
-<br>
-
-_____________________________  
-**FIRMA EL CLIENTE**  
-Nombre:  
-DNI/CUIT:  
-
----
-*Documento generado como borrador por Agencia IA Argentina Segura. Requiere revisión y aprobación final por Humberto Patricio Castro antes de su ejecución.*
-
----
-
-## 🧪 Ejecución y Pruebas (Demo en Vivo)
-
-El proyecto es **100% ejecutable**. Para verificarlo:
-
-### Demo completa del sistema
-```bash
+🧪 Ejecución y Pruebas (Demo en Vivo)
+El proyecto es 100% ejecutable. Para verificarlo:
+Demo completa del sistema
 python main.py --demo
 Esto ejecuta el flujo completo: generación de contrato → supervisión humana → verificación de integridad → informe de cumplimiento.
 Verificar integridad de un archivo
-python main.py --verify --archivo templates/contrato_servicios.md --hash <hash_sha256>
 Ver el system prompt de runtime (conciso)
 python main.py --prompt
 Ejecutar pruebas unitarias
 pytest tests/ -v
-Separación documentación vs. runtime (Consejo 5)
+Separación documentación vs. runtime
 Documentación completa (sin límite de palabras): /prompts/*.md, /docs/
 System prompt de runtime (conciso, optimizado para tokens): definido en main.py como SYSTEM_PROMPT_RUNTIME
-Memoria unificada y evolución (Consejos 2, 3, 4)
+Memoria unificada y evolución
 Segundo cerebro: docs/memoria-agentes.md
 Registro de cambios: CHANGELOG.md
 Auditoría semestral: Sección 9 de docs/legal/cumplimiento_legal.md
@@ -298,5 +192,7 @@ Fork el repositorio.
 Crea una rama: git checkout -b feature/tu-feature.
 Abre un Issue describiendo el cambio.
 Envía un Pull Request con pruebas.
+📄 Licencia
+Distribuido bajo la Licencia MIT. Ver el archivo LICENSE para más detalles.
 Proyecto desarrollado y mantenido por Humberto Patricio Castro. República Argentina, 2026.
 Licensed under MIT License.
