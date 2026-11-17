@@ -27,7 +27,7 @@ LEGAL_FRAMEWORK = {
 }
 
 # Jurisdicción por defecto
-DEFAULT_JURISDICTION = "Ciudad Autónoma de Buenos Aires, Argentina"
+DEFAULT_JURISDICTION = "San Martin, Mendoza, Argentina"
 
 # ==============================================================================
 # 3. SEGURIDAD Y CRIPTOGRAFÍA
