@@ -150,7 +150,7 @@ Conforme al artículo 34 de la Ley 24.240, en contrataciones a distancia el cons
 - No compartir accesos con terceros no autorizados.
 
 ### 9.3 Reporte de vulnerabilidades
-Si el Usuario detecta una vulnerabilidad de seguridad, debe reportarla a: **[correo@dominio.com.ar]**
+Si el Usuario detecta una vulnerabilidad de seguridad, debe reportarla a: **[hp.funes.castro@gmail.com]**
 
 El Sistema se compromete a:
 - Investigar el reporte en un plazo de 72 horas.
@@ -178,7 +178,7 @@ Estos Términos de Uso se rigen por las leyes de la **República Argentina**.
 - **Ley 24.240**: Defensa del Consumidor.
 - **Código Civil y Comercial de la Nación**.
 
-Cualquier controversia será sometida a los tribunales competentes de la **Ciudad Autónoma de Buenos Aires**, Argentina.
+Cualquier controversia será sometida a los tribunales competentes de la **San Martín, Mendoza**, Argentina.
 
 ---
 
@@ -194,7 +194,7 @@ Para consultas sobre estos Términos de Uso:
 
 - **Responsable**: Humberto Patricio Castro
 - **Cargo**: Director General y Propietario
-- **Correo**: [hp.funes.castro@gmail.com.ar]
+- **Correo**: [hp.funes.castro@gmail.com]
 - **Proyecto**: Agencia IA Argentina Segura
 
 ---
