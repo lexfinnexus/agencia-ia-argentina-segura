@@ -263,3 +263,40 @@ DNI/CUIT:
 
 ---
 *Documento generado como borrador por Agencia IA Argentina Segura. Requiere revisión y aprobación final por Humberto Patricio Castro antes de su ejecución.*
+
+---
+
+## 🧪 Ejecución y Pruebas (Demo en Vivo)
+
+El proyecto es **100% ejecutable**. Para verificarlo:
+
+### Demo completa del sistema
+```bash
+python main.py --demo
+Esto ejecuta el flujo completo: generación de contrato → supervisión humana → verificación de integridad → informe de cumplimiento.
+Verificar integridad de un archivo
+python main.py --verify --archivo templates/contrato_servicios.md --hash <hash_sha256>
+Ver el system prompt de runtime (conciso)
+python main.py --prompt
+Ejecutar pruebas unitarias
+pytest tests/ -v
+Separación documentación vs. runtime (Consejo 5)
+Documentación completa (sin límite de palabras): /prompts/*.md, /docs/
+System prompt de runtime (conciso, optimizado para tokens): definido en main.py como SYSTEM_PROMPT_RUNTIME
+Memoria unificada y evolución (Consejos 2, 3, 4)
+Segundo cerebro: docs/memoria-agentes.md
+Registro de cambios: CHANGELOG.md
+Auditoría semestral: Sección 9 de docs/legal/cumplimiento_legal.md
+📈 Roadmap y Contribuciones
+Próximas versiones
+Integración con API de Anthropic Claude
+Interfaz web con Streamlit
+Módulo de firma digital con certificados reales
+Soporte multi-jurisdicción (LATAM)
+Cómo contribuir
+Fork el repositorio.
+Crea una rama: git checkout -b feature/tu-feature.
+Abre un Issue describiendo el cambio.
+Envía un Pull Request con pruebas.
+Proyecto desarrollado y mantenido por Humberto Patricio Castro. República Argentina, 2026.
+Licensed under MIT License.
