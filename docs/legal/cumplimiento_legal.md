@@ -122,3 +122,43 @@ Para cualquier consulta, reclamo o ejercicio de derechos relacionados con el cum
 ---
 
 *Propiedad de Humberto Patricio Castro. República Argentina, 2026.*
+
+---
+
+## 9. PROTOCOLO DE AUDITORÍA SEMESTRAL (Ciclo PDCA)
+
+En cumplimiento del principio de mejora continua y para evitar el "hobbling" (sobrerrestricción innecesaria del modelo), el sistema se somete a una auditoría cada **6 meses** con la siguiente metodología:
+
+### 9.1 Categorización de Reglas
+
+| Categoría | Ejemplo | ¿Se puede modificar en auditoría? |
+|-----------|---------|-----------------------------------|
+| **A. Ley Inmutable** | Supervisión humana obligatoria, hash SHA-256, cláusulas Ley 25.326/25.506/24.240 | ❌ NO. Son requisitos legales argentinos. |
+| **B. Regla Operativa** | Temperatura de IA, formato de contexto humanizado, límite de tokens | ✅ SÍ. Se optimizan según evolución del modelo. |
+| **C. Regla de Seguridad** | Encriptación AES-256, logs inmutables | ⚠️ Solo para fortalecer, nunca para debilitar. |
+
+### 9.2 Cronograma de Auditoría
+
+| Fecha programada | Responsable | Alcance |
+|------------------|-------------|---------|
+| 17/05/2027 | Humberto Patricio Castro | Revisión de SECCIÓN 5 de `docs/memoria-agentes.md` |
+| 17/11/2027 | Humberto Patricio Castro | Revisión integral + actualización de normativa |
+| 17/05/2028 | Humberto Patricio Castro | Revisión de SECCIÓN 5 de `docs/memoria-agentes.md` |
+
+### 9.3 Criterios de Eliminación de Reglas Operativas
+
+Una regla operativa (Categoría B) solo se elimina si cumple **TODOS** estos criterios:
+1. El modelo actual ya la cumple por diseño (verificado con pruebas).
+2. Su eliminación no afecta ninguna regla de Categoría A o C.
+3. La eliminación se documenta en `CHANGELOG.md` y en `docs/memoria-agentes.md`.
+4. Humberto Patricio Castro aprueba la eliminación por escrito.
+
+### 9.4 Registro de Auditorías
+
+| Fecha | Tipo | Reglas revisadas | Reglas eliminadas | Aprobación |
+|-------|------|------------------|-------------------|------------|
+| - | Inaugural | 0 | 0 | Pendiente 17/05/2027 |
+
+---
+
+*Protocolo de auditoría semestral establecido conforme a principios de mejora continua (PDCA) y respetando la inmutabilidad de las obligaciones legales argentinas.*
