@@ -150,7 +150,7 @@ Conforme al artículo 34 de la Ley 24.240, en contrataciones a distancia el cons
 - No compartir accesos con terceros no autorizados.
 
 ### 9.3 Reporte de vulnerabilidades
-Si el Usuario detecta una vulnerabilidad de seguridad, debe reportarla a: **[hp.funes.castro@gmail.com]**
+Si el Usuario detecta una vulnerabilidad de seguridad, debe reportarla a: **welltalk.ai.proyecto@gmail.com**
 
 El Sistema se compromete a:
 - Investigar el reporte en un plazo de 72 horas.
@@ -194,7 +194,7 @@ Para consultas sobre estos Términos de Uso:
 
 - **Responsable**: Humberto Patricio Castro
 - **Cargo**: Director General y Propietario
-- **Correo**: [hp.funes.castro@gmail.com]
+- **Correo**: welltalk.ai.proyecto@gmail.com
 - **Proyecto**: Agencia IA Argentina Segura
 
 ---
