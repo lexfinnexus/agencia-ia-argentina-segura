@@ -116,7 +116,7 @@ Código Civil y Comercial
 Plantillas basadas en principios de buena fe, objeto cierto y jurisdicción argentina.
 🚀 Instalación y Uso
 1. Clonar el repositorio
-git clone https://github.com/TU-USUARIO/agencia-ia-argentina-segura.git
+git clone https://github.com/lexfinnexus/agencia-ia-argentina-segura.git
 cd agencia-ia-argentina-segura
 2. Configurar el entorno virtual
 python -m venv venv
