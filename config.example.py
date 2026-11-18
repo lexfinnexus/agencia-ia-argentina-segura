@@ -52,7 +52,7 @@ DATA_ENCRYPTION_IN_TRANSIT = True
 REQUIRE_EXPLICIT_CONSENT = True
 
 # Contacto para ejercicios de derechos ARCO
-DPO_EMAIL = "dpo@agencia-ia-argentina-segura.com.ar"
+DPO_EMAIL = "welltalk.ai.proyecto@gmail.com"
 
 # ==============================================================================
 # 5. IA Y SUPERVISIÓN HUMANA
