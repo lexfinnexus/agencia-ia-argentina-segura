@@ -56,7 +56,7 @@ Proporcionar una infraestructura de código abierto, segura y auditable para:
                             │
 ┌───────────────────────────▼────────────────────────────────────┐
 │              CAPA DE SUPERVISIÓN HUMANA                          │
-│   (Human-in-the-Loop - Humberto Patricio Castro)                 │
+│                     ( Human-in-the-Loop )                        │
 └───────────────────────────┬────────────────────────────────────┘
                             │
 ┌───────────────────────────▼────────────────────────────────────┐
