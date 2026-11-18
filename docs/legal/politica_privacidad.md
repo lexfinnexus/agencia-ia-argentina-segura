@@ -14,7 +14,7 @@ En cumplimiento del artículo 4 de la Ley 25.326 de Protección de Datos Persona
 - **Responsable**: Humberto Patricio Castro
 - **Cargo**: Director General y Propietario
 - **Proyecto**: Agencia IA Argentina Segura
-- **Correo de contacto**: [hp.funes.castro@gmail.com]
+- **Correo de contacto**: welltalk.ai.proyecto@gmail.com
 - **Domicilio**: [Barrio Solares del Centro Manzada D Casa 9, San Martin, Mendoza, Argentina]
 
 ---
@@ -110,7 +110,7 @@ Solicitar la eliminación de sus datos cuando:
 Oponerse al tratamiento de sus datos para fines de marketing o elaboración de perfiles.
 
 ### Cómo ejercer estos derechos
-Enviar solicitud escrita a: **[hp.funes.castro@gmail.com]** con:
+Enviar solicitud escrita a: **welltalk.ai.proyecto@gmail.com** con:
 - Nombre y apellido del titular.
 - DNI/CUIT.
 - Descripción clara del derecho que se ejerce.
@@ -232,7 +232,7 @@ Ministerio de Justicia y Derechos Humanos de la Nación
 Para consultas sobre esta Política de Privacidad:
 
 - **Responsable**: Humberto Patricio Castro
-- **Correo**: [hp.funes.castro@gmail.com]
+- **Correo**: welltalk.ai.proyecto@gmail.com
 - **Proyecto**: Agencia IA Argentina Segura
 
 ---
