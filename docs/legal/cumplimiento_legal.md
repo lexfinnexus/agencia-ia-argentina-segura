@@ -15,7 +15,7 @@ El presente documento certifica el compromiso de cumplimiento normativo del proy
 - **Responsable Legal y Técnico**: Humberto Patricio Castro
 - **Cargo**: Director General y Propietario
 - **Jurisdicción**: República Argentina
-- **Correo de contacto oficial**: [hp.funes.castro@gmail.com]
+- **Correo de contacto oficial**: welltalk.ai.proyecto@gmail.com
 
 ---
 
@@ -111,7 +111,7 @@ El cumplimiento de esta declaración está sujeto a:
 Para cualquier consulta, reclamo o ejercicio de derechos relacionados con el cumplimiento legal de este proyecto, el canal oficial es:
 
 - **Responsable**: Humberto Patricio Castro
-- **Correo electrónico**: [hp.funes.castro@gmail.com]
+- **Correo electrónico**: welltalk.ai.proyecto@gmail.com
 - **Autoridad de Control en Protección de Datos**: Agencia de Acceso a la Información Pública (AAIP), www.argentina.gob.ar/aaip
 - **Autoridad de Aplicación en Defensa del Consumidor**: Secretaría de Comercio Interior, www.argentina.gob.ar/produccion/defensadelconsumidor
 
