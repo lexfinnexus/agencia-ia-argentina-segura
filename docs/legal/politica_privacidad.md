@@ -15,7 +15,7 @@ En cumplimiento del artículo 4 de la Ley 25.326 de Protección de Datos Persona
 - **Cargo**: Director General y Propietario
 - **Proyecto**: Agencia IA Argentina Segura
 - **Correo de contacto**: welltalk.ai.proyecto@gmail.com
-- **Domicilio**: [Barrio Solares del Centro Manzada D Casa 9, San Martin, Mendoza, Argentina]
+- **Domicilio**: Barrio Solares del Centro Manzada D Casa 9, San Martin, Mendoza, Argentina
 
 ---
 
